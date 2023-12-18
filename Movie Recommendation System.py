@@ -4,6 +4,9 @@ import difflib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 movies_data=pd.read_csv("D:\Sowmya Work\Pantech notes\Copy_of_Project_18_Movie_Recommendation_System_using_Machine_Learning_with_Python-checkpoint\movies.csv")
+movies_data.head()
+movies_data.info()
+movies_data.describe()
 selected_features=["genres","keywords","tagline","cast","director"]
 for feature in selected_features:
     movies_data[feature]=movies_data[feature].fillna("")
